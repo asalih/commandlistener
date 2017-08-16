@@ -1,0 +1,13 @@
+﻿extends layout
+
+block content
+  span select connected client | 
+  select#clients
+    each cl in clients
+        option(value=cl)= cl
+  .commands
+  span.csp >
+  input#cmd.commandInput(type='text' autofocus)
+block scripts
+    script(src='https://code.jquery.com/jquery-3.2.1.min.js', integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=', crossorigin='anonymous')
+    script(type="text/javascript" src="/javascripts/main.js")

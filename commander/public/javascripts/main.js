@@ -26,7 +26,7 @@
                 var keys = Object.keys(result);
                 for (var i = 0; i < keys.length; i++) {
                     $(".commands").append("<p>" + keys[i] + ":</p>");
-                    $(".commands").append("<p>" + result[keys[i]] + "</p>");
+                    $(".commands").append("<p>" + result[keys[i]].split('\n').join('\n<br>\n') + "</p>");
                 }
 
 

